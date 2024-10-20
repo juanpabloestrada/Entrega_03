@@ -1,0 +1,23 @@
+<header>
+    <h1>Práctica Integradora</h1>
+    <nav>
+        <ul>
+            <li><a href="/product">Productos</a></li>
+            <li><a href="/newProduct">Añadir producto</a></li>
+            <li>
+                <a href="/product/{{this_.id}}">{{this.name}}</a> - ${{this.price}}
+                <button onclick="addToCart('{{this._id}}')">Agregar al carrito</button>
+            </li>
+        </ul>
+
+        <div>
+            {{#if hasPrevPage}}
+                <a href="{{prevLink}}">Página anterior</a>
+            {{/if}}
+
+            {{#if hasNextPage}}
+                <a href="{{nextLink}}">Página siguiente</a>
+            {{/if}}
+        </div>
+    </nav>
+</header>
